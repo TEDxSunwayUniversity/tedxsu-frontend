@@ -1,2 +1,0 @@
-Redirect default Netlify subdomain to primary domain
-https://tedxsunwayuni.netlify.com/* https://www.tedxsunwayuniversity.com/:splat 301!
