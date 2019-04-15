@@ -2,12 +2,614 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-layout: home
+layout: page
 ---
 
-<div class="container text-center">
-  <h1 class="page-title">The Team</h1>
+<meta charset="utf-8">
+<title>Event Title</title>
+
+<style>
+  @charset "utf-8";
+  /* CSS Document */
+
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+    background-color: #ededed;
+    /*background: #ffffff;
+	background: -moz-linear-gradient(top, #ffffff 0%, #999999 100%);
+	background: -webkit-linear-gradient(top, #ffffff 0%,#999999 100%);
+	background: linear-gradient(to bottom, #ffffff 0%,#999999 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#999999',GradientType=0 );*/
+  }
+
+  .navbarColor {
+    color: #aaa;
+    background-color: #0f110f;
+  }
+
+  .has-search .form-control {
+    padding-left: 2.375rem;
+  }
+
+  .has-search .form-control-feedback {
+    position: absolute;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+  }
+
+  .has-search input {
+    border-color: #0F0F0F;
+    background-color: #202220;
+  }
+
+  #img-container {
+    z-index: -1;
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #161727;
+  }
+
+  #main-con {
+    width: 100%;
+    height: 100vh;
+    background-color: #161727;
+  }
+
+  #countDownTimer {
+    font-family: 'Playball';
+    font-size: 16pt;
+    font-style: italic;
+  }
+
+  #main-con hr:nth-child(2) {
+    height: 1px;
+    width: 100px;
+    margin-top: 15px;
+    background-color: #ededed;
+  }
+
+  #main-con h3:nth-child(1) {
+    color: #ededed;
+    font-size: 42px;
+    font-family: Staatliches;
+  }
+
+  #info-btn {
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 4px;
+    background-color: #B52C2C;
+    border: 1px solid #B52C2C;
+  }
+
+  a {
+    color: white;
+    text-align: center;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  #info-btn:hover {
+    background-color: white;
+  }
+
+  #info-btn:hover a {
+    color: #B52C2C;
+  }
+
+  .connecterRod {
+    width: 4px;
+    height: 60px;
+    background-color: #161727;
+  }
+
+  .connecterCircle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #161727;
+  }
+
+  .info-box {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    /*
+	color:#1E1E1E;
+	background-color: #deddd8;*/
+    color: #ededed;
+    background-color: #B52C2C;
+  }
+
+  .info-box:hover {
+    background-color: #202220;
+    -webkit-box-shadow: 7px 7px 11px 0px rgba(18, 18, 18, 0.16);
+    -moz-box-shadow: 7px 7px 11px 0px rgba(18, 18, 18, 0.16);
+    box-shadow: 7px 7px 11px 0px rgba(18, 18, 18, 0.16);
+  }
+
+  .con-title {
+    font-family: Staatliches;
+  }
+
+  .con-title:nth-child(3) {
+    color: #B52C2C;
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: 6px;
+  }
+
+  .red-border {
+    border-bottom: 3px solid #B52C2C;
+  }
+
+  .speaker-info-container {
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    color: #ededed;
+    transition: 0.3s;
+    background-color: #202220;
+  }
+
+  .speaker-info-container:hover {
+    -webkit-box-shadow: 7px 7px 11px 0px rgba(18, 18, 18, 0.5);
+    -moz-box-shadow: 7px 7px 11px 0px rgba(18, 18, 18, 0.5);
+    box-shadow: 7px 7px 11px 0px rgba(18, 18, 18, 0.5);
+  }
+
+  .speaker-title-underline {
+    height: 1px;
+    width: 50px;
+    margin: 0;
+    background-color: #ededed;
+  }
+
+  .profile-des {
+    padding-top: 6px;
+    font-size: 14px;
+    color: #7E7E7E;
+  }
+
+  .sponsors-container {
+    color: #ededed;
+    background-color: #202220;
+  }
+
+  .sponsors-container h4 {
+    letter-spacing: 5px;
+    margin-bottom: 0;
+    font-family: Staatliches;
+  }
+
+  .sponsors-container hr {
+    width: 80px;
+    height: 1px;
+    margin-top: 3px;
+    background-color: #ededed;
+  }
+
+  .TEDx-info-container {
+    color: #1E1E1E;
+    border-radius: 6px;
+    background-color: #deddd8;
+  }
+
+  .TEDx-info-container h5 {
+    font-weight: bold;
+  }
+
+  .TEDx-info-container hr {
+    height: 1px;
+    margin: 0;
+    width: 80px;
+    background-color: #B52C2C;
+  }
+
+  .TEDx-info-container p {
+    margin-top: 10px;
+    font-size: 17px;
+    line-height: 20px;
+    font-family: 'Abel';
+    text-align: center;
+  }
+
+  .TEDx-info-container span {
+    color: #B52C2C;
+  }
+
+  .footer {
+    color: #ededed;
+    background-color: #202220;
+  }
+
+  .footer h3 {
+    color: #B52C2C;
+    font-weight: bold;
+  }
+
+  .footer span {
+    font-size: 22px;
+    color: #ededed;
+  }
+
+  .footer ul {
+    list-style: none;
+  }
+
+  .footer ul li {
+    font-size: 19px;
+    float: left;
+    color: #525252;
+    margin-left: 30px;
+  }
+
+  .footer ul li i:hover {
+    color: #ededed;
+    cursor: pointer;
+  }
+
+  .copyright {
+    color: #ededed;
+    background-color: #0F0F0F;
+  }
+
+  .copyright a {
+    color: #ededed;
+  }
+
+  .copyright a:hover {
+    color: #ededed;
+  }
+</style>
+
+<!--Lending Page Container -->
+<div class="d-flex" id="main-con">
+  <div class="container-fluid align-self-center pt-5">
+    <div class="row pt-5">
+      <div class="col-lg-12 text-light d-flex justify-content-center event-counter img-fluid" id="countDownTimer"></div>
+      <hr>
+      <div class="col-lg-12 text-light d-flex justify-content-center mt-4">
+        <h3>UNCHARTED WAVES</h3>
+      </div>
+      <div class="col-lg-12 text-muted d-flex justify-content-center mb-5" style="padding-left: 10px">
+        <p class="text-center">Ideas act like waves, sparking unexpected impacts. Whether it is a completely new
+          perspective or just a story, <br> they all travel around and have unimaginable effects on humanity.
+          Our event revolves around unconventional ideas and perspectives and <br>we invite you to expand your horizons!
+      </div>
+      <div class="col-lg-12 text-light d-flex justify-content-center">
+        <div class="px-3 pt-1 pb-2" id="info-btn">
+          <a href="#event-poster">More Information</a>
+        </div>
+      </div>
+      <!--
+        <div class="col-lg-12 text-muted d-flex justify-content-center mb-0">
+          <p class="text-center mt-2" style="font-size: 11px;">Ticket Deadline<br>00/00/00</p>
+        </div>
+        -->
+    </div>
+  </div>
 </div>
 
-{% include 2019-team-carousel.html %}
-{% include 2019-team-description.html %}
+<!--Event Info-->
+<div class="container-fluid m-0 " id="event-info-con">
+
+  <!--About TEDx-->
+  <div class="row px-3 py-4">
+    <div class="col-lg-12 TEDx-info-container px-3 pt-3 pb-0">
+      <h5>What is <span>TEDx</span>?</h5>
+      <hr>
+      <p style="margin-top: 10px; font-size: 20px; line-height: 20px; font-family:'Abel'">In the spirit of ideas
+        worth spreading, <m style="color: #B52C2C">TED</m> has created a program called <m style="color: #B52C2C">TEDx</m>. 
+        <m style="color: #B52C2C">TEDx</m> is a program of local, self-organized events that bring people together to 
+        share a <m style="color: #B52C2C">TED</m>-like experience. Our event is called <m style="color: #B52C2C">TEDx</m>SunwayUniversity, 
+        where x = independently organized <m style="color: #B52C2C">TED</m> event. At our 
+        <m style="color: #B52C2C">TEDx</m>SunwayUniversity event, TEDTalks video and live speakers will combine to spark 
+        deep discussion and connection in a small group. The <m style="color: #B52C2C">TED</m> Conference provides 
+        general guidance for the <m style="color: #B52C2C">TEDx</m> program, but individual 
+        <m style="color: #B52C2C">TEDx</m> events, including ours, are self-organized.</p>
+    </div>
+  </div>
+
+  <div class="row px-5">
+    <div class="col-xl-12 d-flex justify-content-center">
+      <div class="connecterRod"></div>
+    </div>
+    <div class="col-xl-12 d-flex justify-content-center mb-3">
+      <div class="connecterCircle"></div>
+    </div>
+  </div>
+
+  <div class="col-sm-12 m-0 p-0" id="event-poster">
+    <p>
+      <img src="/images/2019/Uncharted-Waves-banner.png" alt="Uncharted Waves poster"
+        style="padding-top: 10px; padding-bottom: 10px; width: 100%; height: 100%; align-content: center">
+    </p>
+  </div>
+  <div class="row px-5">
+    <div class="container-fluid m-0">
+      <div class="row justify-content-between m-0">
+        <div class="col-md-3 info-box py-4 mt-3">
+          <div class="text-center">Date<br>4th May 2019</div>
+        </div>
+        <div class="col-md-3 info-box py-4 mt-3">
+          <div class="text-center">Time<br>10 A.M to 4 P.M</div>
+        </div>
+        <div class="col-md-3 info-box py-4 mt-3">
+          <div class="text-center">Venue<br>JC3, Level 1</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Speaker-->
+  <div class="row mt-5" id="loopParent">
+    <div class="col-sm-12 py-0">
+      <span class="con-title">UNCHARTED WAVES</span><br>
+      <span class="con-title">Speakers</span>
+      <div class="red-border"></div>
+    </div>
+    <!-- Zlwin Chew -->
+    <div class="col-xl-12" id="loopChild" style="border-radius: 20px;">
+      <div class="speaker-info-container mt-3">
+        <div class="row m-0 p-0">
+          <div class="col-sm-3 col-lg-2 m-0 p-0 d-none d-sm-block"><img src="images/2019/Speakers/Zlwin_Chew.png"
+              width="200" height="150"></div>
+          <div class="col-sm-12 m-0 p-0 d-sm-none d-flex justify-content-center"><img
+              src="images/2019/Speakers/Zlwin_300.png" class="img-fluid"></div>
+          <div class="col-sm-9 pt-4">
+            <h5>Zlwin Chew</h5>
+            <hr class="speaker-title-underline">
+            <p class="profile-des">A full time professional magician and illusionist who has travelled with his
+              shows to over 35 countries around the continents of Europe, America, Middle East, Asia and Australia.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Lu Xanne Boon -->
+    <div class="col-xl-12" id="loopChild" style="border-radius: 20px;">
+      <div class="speaker-info-container mt-3">
+        <div class="row m-0 p-0">
+          <div class="col-sm-3 col-lg-2 m-0 p-0 d-none d-sm-block"><img
+              src="images/2019/Speakers/Lu_Xanne_Boon.png" width="200" height="150"></div>
+          <div class="col-sm-12 m-0 p-0 d-sm-none d-flex justify-content-center"><img
+              src="images/2019/Speakers/Lu_Xanne_Boon_300.png" class="img-fluid"></div>
+          <div class="col-sm-9 pt-4">
+            <h5>Lu Xanne Boon</h5>
+            <hr class="speaker-title-underline">
+            <p class="profile-des">As a coach and therapist, Lu Xanne Boon is a member on the Forbes Coaches Council
+              and was awarded the Top 100 Global Coaches in the world.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Datuk Yasmin -->
+    <div class="col-xl-12" id="loopChild" style="border-radius: 20px;">
+      <div class="speaker-info-container mt-3">
+        <div class="row m-0 p-0">
+          <div class="col-sm-3 col-lg-2 m-0 p-0 d-none d-sm-block"><img src="images/2019/Speakers/Datuk_Yasmin.png"
+              width="200" height="150"></div>
+          <div class="col-sm-12 m-0 p-0 d-sm-none d-flex justify-content-center"><img
+              src="images/2019/Speakers/Datuk_Yasmin_300.png" class="img-fluid"></div>
+          <div class="col-sm-9 pt-4">
+            <h5>Datuk Yasmin Mahmood</h5>
+            <hr class="speaker-title-underline">
+            <p class="profile-des">Datuk Yasmin Mahmood, the former-CEO of Malaysia Digital Economy Corporation (MDEC),
+              is named as one of the world’s 100 most influential people in digital government by Apolitical, a UK-based
+              global network for the government.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Dr Filmer -->
+    <!-- <div class="col-xl-12" id="loopChild" style="border-radius: 20px;">
+        <div class="speaker-info-container mt-3">
+          <div class="row m-0 p-0">
+            <div class="col-sm-3 col-lg-2 m-0 p-0 d-none d-sm-block"><img src="images/2019/Speakers/Filmer.png" width="200"
+                height="150"></div>
+            <div class="col-sm-12 m-0 p-0 d-sm-none d-flex justify-content-center"><img
+                src="images/2019/Speakers/Filmer.png" class="img-fluid"></div>
+            <div class="col-sm-9 pt-4">
+              <h5>Lu Xanne Boon</h5>
+              <hr class="speaker-title-underline">
+              <p class="profile-des">As a coach and therapist, Lu Xanne Boon is a member on the Forbes Coaches Council
+                and
+                was awarded the Top 100 Global Coaches in the world.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    <!-- Raenuga -->
+    <!-- <div class="col-xl-12" id="loopChild" style="border-radius: 20px;">
+        <div class="speaker-info-container mt-3">
+          <div class="row m-0 p-0">
+            <div class="col-sm-3 col-lg-2 m-0 p-0 d-none d-sm-block"><img src="images/2019/Speakers/Raenuga.png" width="200"
+                height="150"></div>
+            <div class="col-sm-12 m-0 p-0 d-sm-none d-flex justify-content-center"><img
+                src="images/2019/Speakers/Raenuga.png" class="img-fluid"></div>
+            <div class="col-sm-9 pt-4">
+              <h5>Lu Xanne Boon</h5>
+              <hr class="speaker-title-underline">
+              <p class="profile-des">As a coach and therapist, Lu Xanne Boon is a member on the Forbes Coaches Council
+                and
+                was awarded the Top 100 Global Coaches in the world.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    <!-- Dr Yap -->
+    <!-- <div class="col-xl-12" id="loopChild" style="border-radius: 20px;">
+        <div class="speaker-info-container mt-3">
+          <div class="row m-0 p-0">
+            <div class="col-sm-3 col-lg-2 m-0 p-0 d-none d-sm-block"><img src="images/2019/Speakers/Dr Yap.png" width="200"
+                height="150"></div>
+            <div class="col-sm-12 m-0 p-0 d-sm-none d-flex justify-content-center"><img
+                src="images/2019/Speakers/Dr Yap.png" class="img-fluid"></div>
+            <div class="col-sm-9 pt-4">
+              <h5>Lu Xanne Boon</h5>
+              <hr class="speaker-title-underline">
+              <p class="profile-des">As a coach and therapist, Lu Xanne Boon is a member on the Forbes Coaches Council
+                and
+                was awarded the Top 100 Global Coaches in the world.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    <!-- Farah -->
+    <!-- <div class="col-xl-12" id="loopChild" style="border-radius: 20px;">
+        <div class="speaker-info-container mt-3">
+          <div class="row m-0 p-0">
+            <div class="col-sm-3 col-lg-2 m-0 p-0 d-none d-sm-block"><img src="images/2019/Speakers/Farah.png" width="200"
+                height="150"></div>
+            <div class="col-sm-12 m-0 p-0 d-sm-none d-flex justify-content-center"><img
+                src="images/2019/Speakers/Farah.png" class="img-fluid"></div>
+            <div class="col-sm-9 pt-4">
+              <h5>Lu Xanne Boon</h5>
+              <hr class="speaker-title-underline">
+              <p class="profile-des">As a coach and therapist, Lu Xanne Boon is a member on the Forbes Coaches Council
+                and
+                was awarded the Top 100 Global Coaches in the world.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    <!-- Theophilia -->
+    <!-- <div class="col-xl-12" id="loopChild" style="border-radius: 20px;">
+        <div class="speaker-info-container mt-3">
+          <div class="row m-0 p-0">
+            <div class="col-sm-3 col-lg-2 m-0 p-0 d-none d-sm-block"><img src="images/2019/Speakers/Theophilia.png" width="200"
+                height="150"></div>
+            <div class="col-sm-12 m-0 p-0 d-sm-none d-flex justify-content-center"><img
+                src="images/2019/Speakers/Theophilia.png" class="img-fluid"></div>
+            <div class="col-sm-9 pt-4">
+              <h5>Lu Xanne Boon</h5>
+              <hr class="speaker-title-underline">
+              <p class="profile-des">As a coach and therapist, Lu Xanne Boon is a member on the Forbes Coaches Council
+                and
+                was awarded the Top 100 Global Coaches in the world.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div> -->
+  </div>
+
+  <div class="container-fluid align-self-center pt-5">
+    <div class="row">
+      <div class="col-lg-12 text-dark d-flex justify-content-center">
+        <div class="px-3 pt-1 pb-2">
+          <p style="margin-top: 10px; font-size: 17px; line-height: 20px; font-family:'Abel'; text-align: center">
+            Excited to find out who our 4th speaker is? Stay tune to @<g style="color: #B52C2C">TEDx</g>SunwayUniversity
+            <i>Instagram</i> or <i>Facebook</i> page as we will reveal them gradually!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Sponsors-->
+  <div class="row mt-5">
+    <div class="col-lg-12 pt-4 sponsors-container text-center">
+      <h6 class="m-0">Our</h6>
+      <h4>SPONSORS</h4>
+      <hr>
+      <div class="row">
+        <div class="col-xl-12 d-flex justify-content-around px-5">
+          <h6><img src="/images/2019/Sponsors/Eva.png" width="200" height="200" class="img-fluid"></h6>
+          <h6><img src="/images/2019/Sponsors/The-vow-florals.png" width="300" height="200" class="img-fluid"></h6>
+          <h6><img src="/images/2019/Sponsors/Tao-Kae-Noi.jpg" width="200" height="200" class="img-fluid"></h6>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-5">
+    <div class="col-sm-12 py-0">
+      <div class="red-border"></div>
+      <p style="margin-top: 10px; font-size: 17px; line-height: 20px; font-family:'Abel'; text-align: center">
+        <b>This independent TEDx event is operated under license from TED.</b>  
+      </p>
+    </div>
+  </div>
+</div>
+
+
+<!--
+  <script>
+    //All the speaker names goes here
+    var speakerName = ["Zlwin Chew", "Next Name"];
+
+    //All the speaker's descriptions goes here
+    var speakerDescription = [
+      "A full time professional magician and illusionist who has travelled with his shows to over 35 countries around the continents of Europe, America, Middle East, Asia and Australia.",
+      "Second description",
+      "Third description"
+    ];
+
+    //Loop to clone child element of loopParent
+    var loopParent = document.getElementById("loopParent");
+    for (var x = 1; x < 1; x++) {
+      var loopChild = document.getElementById("loopChild"),
+        clone = loopChild.cloneNode(true),
+        a = 1;
+      clone.id = "loopChild" + a;
+      a++;
+      loopParent.appendChild(clone);
+    }
+
+    //Loop to change heading and paragraphs
+    for (var i = 0; i < 1; i++) {
+      document.getElementsByTagName("h5")[i].innerHTML = speakerName[i];
+      document.getElementsByTagName("p")[i + 2].innerHTML = speakerDescription[i];
+    }
+
+  </script>
+-->
+
+<script>
+  // Set the date we're counting down to
+  var countDownDate = new Date("May 4, 2019 10:00:00").getTime();
+
+  // Update the count down every 1 second
+  var x = setInterval(function () {
+
+    // Get todays date and time
+    var now = new Date().getTime();
+
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
+
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Output the result in an element with id="demo"
+    document.getElementById("countDownTimer").innerHTML = days + " days - " + hours + " hours - "
+      + minutes + " minutes - " + seconds + " seconds ";
+
+    // If the count down is over, write some text 
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("countDownTimer").innerHTML = "";
+    }
+  }, 1000);
+</script>
