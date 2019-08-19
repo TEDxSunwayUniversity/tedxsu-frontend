@@ -1,0 +1,43 @@
+---
+layout: page
+permalink: /gallery
+---
+
+<!-- Header -->
+<div class="container text-center">
+    <h1 class="page-title">Gallery</h1>
+    <p>Click <a href="https://www.flickr.com/photos/162976476@N06/" target="_blank">here</a> for more of our past event
+        pictures!
+    </p>
+</div>
+
+<div class="row d-flex align-items-stretch" id="loopParent">
+    <div id="loopChild-0" class="col-lg-4 col-md-6 py-2 d-flex align-items-stretch"><img
+            src="/images/gallery/teddytalkgroupimg.jpg" style="width:100%;"></div>
+</div>
+
+
+<script>
+    //All the images links
+    var imgLinks = [
+        "/images/gallery/teddytalk_one.jpg", "/images/gallery/teddytalk_two.jpg",
+        "/images/gallery/teddytalk_three.jpg", "/images/gallery/teddytalk_four.jpg", "/images/gallery/teddytalk_five.jpg",
+        "/images/gallery/teddytalk_six.jpg", "/images/gallery/teddytalk_seven.jpg", "/images/gallery/teddytalk_eight.jpg",
+        "/images/gallery/teddytalk_nine.jpg", "/images/gallery/waves_one.jpg", "/images/gallery/waves_two.jpg",
+        "/images/gallery/waves_three.jpg", "/images/gallery/waves_four.jpg", "/images/gallery/waves_five.jpg",
+        "/images/gallery/waves_six.jpg", "/images/gallery/waves_seven.jpg", "/images/gallery/waves_eight.jpg",
+        "/images/gallery/waves_nine.jpg", "/images/gallery/waves_ten.jpg", "/images/gallery/waves_eleven.jpg",
+        "/images/gallery/waves_twelve.jpg", "/images/gallery/waves_thirteen.jpg", "/images/gallery/waves_fourteen.jpg"
+    ];
+
+    //Loop to clone child element of loopParent
+    var loopParent = document.getElementById("loopParent");
+    for (var x = 0; x < imgLinks.length; x++) {
+        var loopChild = document.getElementById("loopChild-" + x),
+            clone = loopChild.cloneNode(true)
+        clone.id = "loopChild-" + (x + 1);
+        loopParent.appendChild(clone);
+        document.getElementById("loopChild-" + (x + 1)).getElementsByTagName("img")[0].src = imgLinks[x];
+    }
+
+</script>
