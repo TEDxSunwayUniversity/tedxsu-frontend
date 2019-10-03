@@ -10,34 +10,100 @@ permalink: /gallery
         pictures!
     </p>
 </div>
+<br>
 
-<div class="row d-flex align-items-stretch" id="loopParent">
-    <div id="loopChild-0" class="col-lg-4 col-md-6 py-2 d-flex align-items-stretch"><img
-            src="/images/gallery/teddytalkgroupimg.jpg" style="width:100%;"></div>
+<!-- Patefacio -->
+<div class="col-sm-12 py-0">
+    <span class="con-title"><b>12<sup>th</sup> September 2019</b></span><br>
+    <span class="con-title">Patefacio Forum</span>
+    <hr class="red-border"><br>
 </div>
 
+<div class="row d-flex align-items-stretch" id="loopParentPatefacio">
+    <div id="loopChildPatefacio-0" class="col-lg-4 col-md-6 py-2 d-flex align-items-stretch"><img
+            src="/images/gallery/patefacio_imgsix.jpg" style="width:100%;"></div>
+</div>
+<br>
+
+<!-- TEDDY Talk -->
+<div class="col-sm-12 py-0">
+    <span class="con-title"><b>27<sup>th</sup> June 2019</b></span><br>
+    <span class="con-title">TEDDY Talk</span>
+    <hr class="red-border"><br>
+</div>
+
+<div class="row d-flex align-items-stretch" id="loopParentTEDDYTalk">
+    <div id="loopChildTEDDYTalk-0" class="col-lg-4 col-md-6 py-2 d-flex align-items-stretch"><img
+            src="/images/gallery/teddytalkgroupimg.jpg" style="width:100%;"></div>
+</div>
+<br>
+
+<!-- Uncharted Waves -->
+<div class="col-sm-12 py-0">
+    <span class="con-title"><b>5<sup>th</sup> May 2019</b></span><br>
+    <span class="con-title">Uncharted Waves</span>
+    <hr class="red-border"><br>
+</div>
+
+<div class="row d-flex align-items-stretch" id="loopParentWaves">
+    <div id="loopChildWaves-0" class="col-lg-4 col-md-6 py-2 d-flex align-items-stretch"><img
+            src="/images/gallery/waves_one.jpg" style="width:100%;"></div>
+</div>
+<br>
 
 <script>
-    //All the images links
-    var imgLinks = [
+    //All the images links for Patefacio
+    var imgPatefacio = [
+        "/images/gallery/patefacio_imgfive.jpg", "/images/gallery/patefacio_imgfour.jpg",
+        "/images/gallery/patefacio_imgthree.jpg", "/images/gallery/patefacio_imgtwo.jpg",
+        "/images/gallery/patefacio_imgone.jpg"
+    ];
+
+    //All the images links for TEDDY Talk
+    var imgTEDDYTalk = [
         "/images/gallery/teddytalk_one.jpg", "/images/gallery/teddytalk_two.jpg",
         "/images/gallery/teddytalk_three.jpg", "/images/gallery/teddytalk_four.jpg", "/images/gallery/teddytalk_five.jpg",
         "/images/gallery/teddytalk_six.jpg", "/images/gallery/teddytalk_seven.jpg", "/images/gallery/teddytalk_eight.jpg",
-        "/images/gallery/teddytalk_nine.jpg", "/images/gallery/waves_one.jpg", "/images/gallery/waves_two.jpg",
+        "/images/gallery/teddytalk_nine.jpg"
+    ];
+
+    //All the images links for Uncharted Waves
+    var imgWaves = [
+        "/images/gallery/waves_two.jpg",
         "/images/gallery/waves_three.jpg", "/images/gallery/waves_four.jpg", "/images/gallery/waves_five.jpg",
         "/images/gallery/waves_six.jpg", "/images/gallery/waves_seven.jpg", "/images/gallery/waves_eight.jpg",
         "/images/gallery/waves_nine.jpg", "/images/gallery/waves_ten.jpg", "/images/gallery/waves_eleven.jpg",
         "/images/gallery/waves_twelve.jpg", "/images/gallery/waves_thirteen.jpg", "/images/gallery/waves_fourteen.jpg"
     ];
 
-    //Loop to clone child element of loopParent
-    var loopParent = document.getElementById("loopParent");
-    for (var x = 0; x < imgLinks.length; x++) {
-        var loopChild = document.getElementById("loopChild-" + x),
+    //Loop to clone child element of loopParentPatefacio
+    var loopParent = document.getElementById("loopParentPatefacio");
+    for (var x = 0; x < imgPatefacio.length; x++) {
+        var loopChild = document.getElementById("loopChildPatefacio-" + x),
             clone = loopChild.cloneNode(true)
-        clone.id = "loopChild-" + (x + 1);
+        clone.id = "loopChildPatefacio-" + (x + 1);
         loopParent.appendChild(clone);
-        document.getElementById("loopChild-" + (x + 1)).getElementsByTagName("img")[0].src = imgLinks[x];
+        document.getElementById("loopChildPatefacio-" + (x + 1)).getElementsByTagName("img")[0].src = imgPatefacio[x];
+    }
+
+    //Loop to clone child element of loopParentTEDDYTalk
+    var loopParent = document.getElementById("loopParentTEDDYTalk");
+    for (var x = 0; x < imgTEDDYTalk.length; x++) {
+        var loopChild = document.getElementById("loopChildTEDDYTalk-" + x),
+            clone = loopChild.cloneNode(true)
+        clone.id = "loopChildTEDDYTalk-" + (x + 1);
+        loopParent.appendChild(clone);
+        document.getElementById("loopChildTEDDYTalk-" + (x + 1)).getElementsByTagName("img")[0].src = imgTEDDYTalk[x];
+    }
+
+    //Loop to clone child element of loopParentUnchartedWaves
+    var loopParent = document.getElementById("loopParentWaves");
+    for (var x = 0; x < imgWaves.length; x++) {
+        var loopChild = document.getElementById("loopChildWaves-" + x),
+            clone = loopChild.cloneNode(true)
+        clone.id = "loopChildWaves-" + (x + 1);
+        loopParent.appendChild(clone);
+        document.getElementById("loopChildWaves-" + (x + 1)).getElementsByTagName("img")[0].src = imgWaves[x];
     }
 
 </script>
