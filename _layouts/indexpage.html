@@ -5,209 +5,52 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-    {% include head.html %}
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 
+    {% include head.html %}
 
     <style>
         @charset "utf-8";
         /* CSS Document */
 
-        html,
-        body {
-            height: 100%;
-            width: 100%;
-            background-color: #ededed;
-            /*background: #ffffff;
-          background: -moz-linear-gradient(top, #ffffff 0%, #999999 100%);
-          background: -webkit-linear-gradient(top, #ffffff 0%,#999999 100%);
-          background: linear-gradient(to bottom, #ffffff 0%,#999999 100%);
-          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#999999',GradientType=0 );*/
-        }
-
-        .navbarColor {
-            color: #aaa;
-            background-color: #0f110f;
-        }
-
-        .has-search .form-control {
-            padding-left: 2.375rem;
-        }
-
-        .has-search .form-control-feedback {
-            position: absolute;
-            width: 2.375rem;
-            height: 2.375rem;
-            line-height: 2.375rem;
-            text-align: center;
-            pointer-events: none;
-            color: #aaa;
-        }
-
-        .has-search input {
-            border-color: #0F0F0F;
-            background-color: #202220;
-        }
-
-        #img-container {
-            z-index: -1;
-            position: absolute;
-            margin: auto;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            background-color: #161727;
-        }
-
-        #main-con {
-            width: 100%;
-            height: 100vh;
-            background-color: #161727;
-        }
-
-        #countDownTimer {
-            font-family: 'Playball';
-            font-size: 16pt;
-            font-style: italic;
-        }
-
-        #main-con hr:nth-child(2) {
-            height: 1px;
-            width: 100px;
-            margin-top: 15px;
-            background-color: #ededed;
-        }
-
-        #main-con h3:nth-child(1) {
-            color: #ededed;
-            font-size: 42px;
-            font-family: Staatliches;
-        }
-
-        #info-btn {
-            cursor: pointer;
-            transition: 0.3s;
-            border-radius: 4px;
-            background-color: #B52C2C;
-            border: 1px solid #B52C2C;
-        }
-
-        a {
+        .photo-caption {
             color: white;
-            text-align: center;
         }
 
         html {
             scroll-behavior: smooth;
         }
 
-        #info-btn:hover {
-            background-color: white;
-        }
-
-        #info-btn:hover a {
-            color: #B52C2C;
-        }
-
         .connecterRod {
             width: 4px;
-            height: 60px;
-            background-color: #161727;
+            height: 90px;
+            background-color: #d1d1d1;
         }
 
         .connecterCircle {
             width: 10px;
             height: 10px;
             border-radius: 50%;
-            background-color: #161727;
+            background-color: #d1d1d1;
         }
 
-        .info-box {
-            border-radius: 5px;
-            cursor: pointer;
-            transition: 0.3s;
-            /*
-          color:#1E1E1E;
-          background-color: #deddd8;*/
-            color: #ededed;
-            background-color: #B52C2C;
-        }
-
-        .info-box:hover {
-            background-color: #202220;
-            -webkit-box-shadow: 7px 7px 11px 0px rgba(18, 18, 18, 0.16);
-            -moz-box-shadow: 7px 7px 11px 0px rgba(18, 18, 18, 0.16);
-            box-shadow: 7px 7px 11px 0px rgba(18, 18, 18, 0.16);
-        }
-
-        .con-title {
-            font-family: Staatliches;
-        }
-
-        .con-title:nth-child(3) {
-            color: #B52C2C;
-            font-weight: bold;
-            font-size: 24px;
-            letter-spacing: 6px;
-        }
-
-        .red-border {
-            border-bottom: 3px solid #B52C2C;
-        }
-
-        .speaker-info-container {
-            border-radius: 5px;
-            overflow: hidden;
-            cursor: pointer;
-            color: #ededed;
-            transition: 0.3s;
-            background-color: #202220;
-        }
-
-        .speaker-info-container:hover {
-            -webkit-box-shadow: 7px 7px 11px 0px rgba(18, 18, 18, 0.5);
-            -moz-box-shadow: 7px 7px 11px 0px rgba(18, 18, 18, 0.5);
-            box-shadow: 7px 7px 11px 0px rgba(18, 18, 18, 0.5);
-        }
-
-        .speaker-title-underline {
-            height: 1px;
-            width: 50px;
-            margin: 0;
-            background-color: #ededed;
-        }
-
-        .profile-des {
-            padding-top: 6px;
-            font-size: 14px;
-            color: #7E7E7E;
-        }
-
-        .sponsors-container {
-            color: #ededed;
-            background-color: #202220;
-        }
-
-        .sponsors-container h4 {
-            letter-spacing: 5px;
-            margin-bottom: 0;
-            font-family: Staatliches;
-        }
-
-        .sponsors-container hr {
-            width: 80px;
-            height: 1px;
-            margin-top: 3px;
-            background-color: #ededed;
+        .border {
+            border-bottom: 2px solid #d1d1d1;
         }
 
         .TEDx-info-container {
             color: #1E1E1E;
             border-radius: 6px;
-            background-color: #deddd8;
+            cursor: pointer;
+            background-color: #f0f0f0;
+            -webkit-box-shadow: 7px 7px 11px 0px rgba(18, 18, 18, 0.5);
+            -moz-box-shadow: 7px 7px 11px 0px rgba(18, 18, 18, 0.5);
+            box-shadow: 7px 7px 11px 0px rgba(18, 18, 18, 0.5);
         }
 
         .TEDx-info-container h5 {
             font-weight: bold;
+            font-family: Montserrat;
         }
 
         .TEDx-info-container hr {
@@ -220,62 +63,18 @@
         .TEDx-info-container p {
             margin-top: 10px;
             font-size: 17px;
-            line-height: 20px;
-            font-family: 'Abel';
+            line-height: 200%;
             text-align: center;
         }
 
         .TEDx-info-container span {
             color: #B52C2C;
         }
-
-        .footer {
-            color: #ededed;
-            background-color: #202220;
-        }
-
-        .footer h3 {
-            color: #B52C2C;
-            font-weight: bold;
-        }
-
-        .footer span {
-            font-size: 22px;
-            color: #ededed;
-        }
-
-        .footer ul {
-            list-style: none;
-        }
-
-        .footer ul li {
-            font-size: 19px;
-            float: left;
-            color: #525252;
-            margin-left: 30px;
-        }
-
-        .footer ul li i:hover {
-            color: #ededed;
-            cursor: pointer;
-        }
-
-        .copyright {
-            color: #ededed;
-            background-color: #0F0F0F;
-        }
-
-        .copyright a {
-            color: #ededed;
-        }
-
-        .copyright a:hover {
-            color: #ededed;
-        }
     </style>
 </head>
 
 <body style="display: flex; min-height: 100vh; flex-direction: column;">
+
     {% include navbar.html %}
 
     <div class="flex: 1;">
