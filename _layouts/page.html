@@ -5,6 +5,8 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+
   {% include head.html %}
 
   <style>
@@ -79,7 +81,10 @@
       color: #e62b1e;
       font-weight: bold;
       font-size: 28px;
-      /* letter-spacing: 1px; */
+    }
+
+    .con-title, .con-title:nth-child(3), h1, p {
+      font-family: Montserrat;
     }
   </style>
 
@@ -87,6 +92,7 @@
 </head>
 
 <body style="display: flex; min-height: 100vh; flex-direction: column;">
+
   {% include navbar.html %}
 
   <div class="container-fluid">
