@@ -1,9 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+
   {% include head.html %}
+
+  <style>
+    h1, h3, h4, p, .col {
+      font-family: Montserrat;
+    }
+
+    @media (max-width: 720px) {
+      p {
+        font-size: 12px;
+      }
+    }
+  </style>
 </head>
-<body style="display: flex; min-height: 100vh; flex-direction: column;">
+
+<body style="display: flex; min-height: 100vh; flex-direction: column">
+
   {% include navbar.html %}
 
   <div style="flex: 1;">
@@ -13,4 +33,5 @@
   {% include footer.html %}
   {% include scripts.html %}
 </body>
+
 </html>
