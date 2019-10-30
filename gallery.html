@@ -12,6 +12,19 @@ permalink: /gallery
 </div>
 <br>
 
+<!-- IGNITED -->
+<div class="col-sm-12 py-0">
+    <span class="con-title"><b>24<sup>th</sup> October 2019</b></span><br>
+    <span class="con-title">IGNITED</span>
+    <hr class="red-border"><br>
+</div>
+
+<div class="row d-flex align-items-stretch" id="loopParentIGNITED">
+    <div id="loopChildIGNITED-0" class="col-lg-4 col-md-6 py-2 d-flex align-items-stretch"><img
+            src="/images/gallery/ignited_one.jpg" style="width:100%;"></div>
+</div>
+<br>
+
 <!-- Patefacio -->
 <div class="col-sm-12 py-0">
     <span class="con-title"><b>12<sup>th</sup> September 2019</b></span><br>
@@ -52,6 +65,13 @@ permalink: /gallery
 <br>
 
 <script>
+    //All the images links for IGNITED
+    var imgIGNITED = [
+        "/images/gallery/ignited_two.jpg", "/images/gallery/ignited_three.jpg", "/images/gallery/ignited_four.jpg",
+        "/images/gallery/ignited_five.jpg", "/images/gallery/ignited_six.jpg", "/images/gallery/ignited_seven.jpg",
+        "/images/gallery/ignited_eight.jpg"
+    ];
+
     //All the images links for Patefacio
     var imgPatefacio = [
         "/images/gallery/patefacio_imgfive.jpg", "/images/gallery/patefacio_imgfour.jpg",
@@ -75,6 +95,16 @@ permalink: /gallery
         "/images/gallery/waves_nine.jpg", "/images/gallery/waves_ten.jpg", "/images/gallery/waves_eleven.jpg",
         "/images/gallery/waves_twelve.jpg", "/images/gallery/waves_thirteen.jpg", "/images/gallery/waves_fourteen.jpg"
     ];
+
+    //Loop to clone child element of loopParentIGNITED
+    var loopParent = document.getElementById("loopParentIGNITED");
+    for (var x = 0; x < imgIGNITED.length; x++) {
+        var loopChild = document.getElementById("loopChildIGNITED-" + x),
+            clone = loopChild.cloneNode(true)
+        clone.id = "loopChildIGNITED-" + (x + 1);
+        loopParent.appendChild(clone);
+        document.getElementById("loopChildIGNITED-" + (x + 1)).getElementsByTagName("img")[0].src = imgIGNITED[x];
+    }
 
     //Loop to clone child element of loopParentPatefacio
     var loopParent = document.getElementById("loopParentPatefacio");
