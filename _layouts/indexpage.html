@@ -7,6 +7,8 @@
 
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     {% include head.html %}
 
     <style>
@@ -35,7 +37,10 @@
         }
 
         .border {
-            border-bottom: 2px solid #d1d1d1;
+            height: 1px;
+            color: #d1d1d1;
+            margin-left: 5%;
+            margin-right: 5%;
         }
 
         .TEDx-info-container {
@@ -62,13 +67,58 @@
         .TEDx-info-container p {
             margin-top: 10px;
             font-size: 17px;
-            line-height: 200%;
+            line-height: normal;
+            letter-spacing: 1px;
             text-align: center;
             color: #383838;
         }
 
         .TEDx-info-container span {
             color: #B52C2C;
+        }
+
+        #mySidenav a {
+            position: fixed;
+            left: -180px;
+            transition: 0.3s;
+            padding: 15px;
+            width: 190px;
+            text-decoration: none;
+            text-align: left;
+            font-size: 13px;
+            font-family: Montserrat;
+            font-weight: bold;
+            color: white;
+            border-radius: 0 6px 6px 0;
+        }
+
+        #mySidenav a:hover {
+            left: 0;
+        }
+
+        #Home {
+            top: 160px;
+            background-color: #383838;
+        }
+
+        #TED {
+            top: 200px;
+            background-color: #B52C2C;
+        }
+
+        #TEDx {
+            top: 240px;
+            background-color: #383838;
+        }
+
+        #TEDxSunwayUniversity {
+            top: 280px;
+            background-color: #B52C2C;
+        }
+
+        #SunwayUniversity {
+            top: 320px;
+            background-color: #383838;
         }
     </style>
 </head>
@@ -79,6 +129,14 @@
 
     <div class="flex: 1;">
         {{ content }}
+
+        <div id="mySidenav" class="sidenav">
+            <a href="#Home" id="Home">Home</a>
+            <a href="#AboutTED" id="TED">TED</a>
+            <a href="#AboutTEDx" id="TEDx">TEDx</a>
+            <a href="#AboutTEDxSunwayUniversity" id="TEDxSunwayUniversity">TEDxSunwayUniversity</a>
+            <a href="#AboutSunwayUniversity" id="SunwayUniversity">Sunway University</a>
+        </div>
     </div>
 
     {% include footer.html %}
